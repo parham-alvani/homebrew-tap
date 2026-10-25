@@ -1,0 +1,25 @@
+---
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+      - uses: Homebrew/actions/setup-homebrew@main
+      - name: Tap this checkout
+        run: |
+          rm -rf "$(brew --repository)/Library/Taps/parham-alvani/homebrew-tap"
+          mkdir -p "$(brew --repository)/Library/Taps/parham-alvani"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/parham-alvani/homebrew-tap"
+          brew trust parham-alvani/tap
+      - run: brew style parham-alvani/tap
+      - run: brew audit --cask --strict --online parham-alvani/tap/daftar
+      - run: brew install --cask parham-alvani/tap/daftar
+      - run: test -d /Applications/Daftar.app
+      - run: brew uninstall --cask daftar
