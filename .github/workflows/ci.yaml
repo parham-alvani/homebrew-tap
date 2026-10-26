@@ -23,3 +23,22 @@ jobs:
       - run: brew install --cask parham-alvani/tap/daftar
       - run: test -d /Applications/Daftar.app
       - run: brew uninstall --cask daftar
+      - run: brew audit --formula --strict --online parham-alvani/tap/daftar-cli
+      - run: brew install parham-alvani/tap/daftar-cli
+      - run: brew test parham-alvani/tap/daftar-cli
+      - run: brew uninstall daftar-cli
+
+  linux:
+    # The formula on Linuxbrew.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: Homebrew/actions/setup-homebrew@main
+      - name: Tap this checkout
+        run: |
+          rm -rf "$(brew --repository)/Library/Taps/parham-alvani/homebrew-tap"
+          mkdir -p "$(brew --repository)/Library/Taps/parham-alvani"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/parham-alvani/homebrew-tap"
+          brew trust parham-alvani/tap
+      - run: brew install parham-alvani/tap/daftar-cli
+      - run: brew test parham-alvani/tap/daftar-cli

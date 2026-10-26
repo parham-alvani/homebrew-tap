@@ -8,6 +8,7 @@ Homebrew casks and formulae for apps from [parham-alvani](https://github.com/par
 brew tap parham-alvani/tap
 brew trust parham-alvani/tap
 brew install --cask daftar
+brew install daftar-cli
 ```
 
 Homebrew loads casks from a third-party tap only after you trust it with `brew trust`.
@@ -18,8 +19,14 @@ Homebrew loads casks from a third-party tap only after you trust it with `brew t
 | --- | --- | --- |
 | `daftar` | Daftar: a native macOS app for an Obsidian vault in a Git repository (Apple silicon, macOS 15 or later) | [notes-mac](https://github.com/parham-alvani/notes-mac) |
 
+## Formulae
+
+| Formula | Tool | Source |
+| --- | --- | --- |
+| `daftar-cli` | Daftar on the command line: find, search, tasks, backlinks, broken links, picture cleanup and Git sync for an Obsidian vault (macOS and Linux, Apple silicon, Intel and ARM) | [notes-linux](https://github.com/parham-alvani/notes-linux) |
+
 ## Notes
 
 Daftar releases are ad-hoc signed and not notarized. The cask removes the quarantine attribute after install, so Gatekeeper lets the app open.
 
-A scheduled workflow checks the latest notes-mac release every day and bumps the cask version and checksum when a new release is published.
+A scheduled workflow checks the latest notes-mac release every day and bumps the cask version and checksum when a new release is published. The same workflow follows notes-linux releases for the `daftar-cli` formula.
