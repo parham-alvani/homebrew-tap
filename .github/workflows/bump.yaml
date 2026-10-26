@@ -64,7 +64,8 @@ jobs:
           done
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qam "daftar-cli $version"
+          # The cask job may have pushed meanwhile.
           git pull --rebase -q
-          git commit -am "daftar-cli $version"
           git push
           gh workflow run ci.yaml
