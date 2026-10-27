@@ -10,23 +10,23 @@ class DaftarCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.3/daftar-cli-0.4.3-aarch64-apple-darwin.tar.gz"
-      sha256 "d41cb9c43e52a46891428d4a33848766c1bcf3b49b32c6d92ac3ce6f5730e555"
+      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.4/daftar-cli-0.4.4-aarch64-apple-darwin.tar.gz"
+      sha256 "2751fcf8ec6b8b8cee7a0c68488afef82a43e9a0de793df1f9eb61132cd08ae3"
     end
     on_intel do
-      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.3/daftar-cli-0.4.3-x86_64-apple-darwin.tar.gz"
-      sha256 "7b3ad4809f45d3f335929c81ce9fb4f2aaab4fe9a26f0316b9e3e4fe971b3936"
+      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.4/daftar-cli-0.4.4-x86_64-apple-darwin.tar.gz"
+      sha256 "91b507af6b365ab82d4166ba9e0b2ccef5e76828be3c6e2d3886ee9b2ebaf736"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.3/daftar-cli-0.4.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2d516081a38711e3facfe55fe9fd9ee4d3ecb903e24025642805b0a754605198"
+      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.4/daftar-cli-0.4.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f0f4224502ab3c47236e7fd07a552b6108aabf33aceb53238894d37598883cbe"
     end
     on_intel do
-      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.3/daftar-cli-0.4.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d549d05467bca9c3f83ff28dfc41828423427a6bd5c7ce3f5d21472975cc9937"
+      url "https://github.com/parham-alvani/notes-linux/releases/download/v0.4.4/daftar-cli-0.4.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "aa63dc7c36324cdc063621cd2ae700127a73c73ddd97a02e60472a5e4f059a47"
     end
   end
 
