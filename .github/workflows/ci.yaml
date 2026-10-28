@@ -20,7 +20,9 @@ jobs:
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/parham-alvani/homebrew-tap"
           brew trust parham-alvani/tap
       - run: brew style parham-alvani/tap
-      - run: brew audit --cask --strict --online parham-alvani/tap/daftar
+      # A release is newer than the cask until the next bump; bump keeps the
+      # version, so CI does not fail in that time.
+      - run: brew audit --cask --strict --online --except=livecheck_version parham-alvani/tap/daftar
       - run: brew install --cask parham-alvani/tap/daftar
       - run: test -d /Applications/Daftar.app
       - run: brew uninstall --cask daftar
