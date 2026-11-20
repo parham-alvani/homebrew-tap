@@ -1,6 +1,6 @@
 cask "daftar" do
-  version "0.24.0"
-  sha256 "2c80062a6c29c6b943232e8c01fe497b8585eb87ed0460e13cb0672f23f67099"
+  version "0.25.0"
+  sha256 "7eeef81cbb5d18598f57f0bdc0eb9a7b119bbf7e5371681e06f82f6b693ec9ca"
 
   url "https://github.com/parham-alvani/notes-mac/releases/download/v#{version}/Daftar-#{version}.zip"
   name "Daftar"
