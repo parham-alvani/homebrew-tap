@@ -32,6 +32,8 @@ class DaftarCli < Formula
 
   def install
     bin.install "daftar-cli"
+    generate_completions_from_executable(bin/"daftar-cli", "completions")
+    system bin/"daftar-cli", "man", "--dir", man1
   end
 
   test do
